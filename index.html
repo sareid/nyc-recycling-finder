@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>NYC Recycling Bin Locator</title>
+  <meta name="author" content="Andrew Reid">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css"/>
+  <script src="http://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.js"></script>
+  <script src='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.js'></script>
+  <link href='https://api.mapbox.com/mapbox.js/v2.3.0/mapbox.css' rel='stylesheet' />
+  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+  <link rel="stylesheet" type="text/css" href="http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+  <script type='text/javascript' src='http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js?2'></script>
+  <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js'></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <h1>Public Recycling Bins in New York City</h1>
+      <h4>Source: <a href="https://data.cityofnewyork.us/api/views/sxx4-xhzg/rows.json?accessType=DOWNLOAD">NYC Open Data</h4></a>
+      <div class="col-xs-12">
+        <h3>Location of public recycling bins</h3>
+        <div id="map"></div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-xs-6">
+        <h3>Total public recycling bins (by borough)</h3>
+        <canvas id="binsPerBorough" width="225" height="225"></canvas>
+      </div>
+      <div class="col-xs-6">
+        <h3>Residents per public recycling bin (by borough)</h3>
+        <canvas id="binsPerCapita" width="280" height="250"></canvas>
+        <p>Based on population data <a href="https://en.wikipedia.org/wiki/Demographics_of_New_York_City">from Wikipedia</p></a>
+      </div>
+    </div>
+  </div>
+
+</body>
+<script src="js/jquery-2.2.2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
+<script src="js/recycling.js"></script>
+
+</html>
